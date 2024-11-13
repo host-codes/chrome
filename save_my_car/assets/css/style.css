@@ -1,0 +1,350 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+margin: 3px;
+ 
+ }
+ 
+ 
+ .extpopup{
+	    font-family: Arial, sans-serif;
+    margin: -2px;
+    background-color: #b59191;
+    background: rgb(245 231 231 / 80%);
+    color: #000000;
+    max-width: 300px;
+    font-size: 16px;
+    text-shadow: -1px 1px 5px #1e1b1b;
+    width: 303px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #063149;
+    background-image: -webkit-linear-gradient(235deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    border: 7px solid #385a6d;
+    color: rgb(255 255 255);
+    padding: 10px;
+ }
+h2 {
+  color: #333;
+}
+button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+label {
+  font-weight: bold;
+}
+/*#game-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*#game-container { position: relative; width: 100%; height: 100%; } * /
+#score { position: absolute; top: 10px; left: 10px; }
+#gameOverPopup { /* Popup styling * / }
+#chartContainer { display: flex; flex-direction: column; align-items: center; }
+canvas { margin: 20px; }
+
+
+#game-container {
+  position: relative;
+  width: 400px;
+  margin: auto;
+}
+
+#progressContainer {
+  width: 100%;
+  background-color: #ddd;
+  height: 10px;
+  margin-top: 10px;
+}
+
+#progressBar {
+  width: 0%;
+  height: 100%;
+  background-color: #4caf50;
+} */
+
+ 
+
+/* Center and style game container */
+#game-container {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+
+
+
+
+
+/* Position score in top left */
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Sound Toggle and Progress Bar Styling 
+#soundToggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}*/
+
+
+#soundToggle {
+  position: absolute;
+  /* top: 10px; */
+  right: 36px;
+}
+#progressContainer {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  margin-top: 20px;
+}
+#progressBar {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+}
+
+/* Game Over Popup */
+#gameOverPopup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  display: none;
+  width: 80%;
+  max-width: 300px;
+}
+#gameOverPopup h3 {
+  margin: 0 0 10px;
+}
+#gameOverPopup button {
+  margin: 26px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  margin-left: 92px;
+}
+#playAgain {
+  background-color: #4caf50;
+  color: white;
+}
+#closePopup {
+  background-color: #f44336;
+  color: white;
+}
+
+
+/* Switch styling */
+.switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.switch label {
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+}
+.slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.slider.round {
+  border-radius: 20px;
+}
+.slider:before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+input:checked + .slider {
+  background-color: #4caf50;
+}
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Progress Bar Styling */
+#progressContainer {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  margin-top: 20px;
+}
+#progressBar {
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%;
+}
+
+/* Game Over Popup */
+#gameOverPopup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  display: none;
+  width: 80%;
+  max-width: 300px;
+}
+#closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #f44336;
+}
+
+
+h3.gmover {
+  position: absolute;
+  top: -2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(237 237 237 / 80%);
+  color: #000000;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  /* display: none; */
+  width: 49%;
+  max-width: 300px;
+  font-size: 30px;
+  text-shadow: -1px 1px 5px #1e1b1b;
+}
+
+
+p.pgame {
+  /* position: absolute; */
+  /* top: -11%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  background: rgb(185 174 174 / 80%);
+  color: #ebe8e8;
+  padding: 4px;
+  border-radius: 8px;
+  text-align: center;
+  /* display: none; */
+  width: 93%;
+  max-width: 300px;
+  font-size: 20px;
+  text-shadow: -1px 1px 5px #030303;
+}
+
+
+
+
+
+
+
+/* Road Divider Styling */
+.road-divider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 100%;
+  background-color: white;
+  z-index: 1; /* Lower z-index to place the divider behind the car */
+}
+
+/* Car Styling */
+#playerCar {
+  position: absolute;
+  bottom: 50px; /* Position the car towards the bottom of the game container */
+  left: 180px; /* Center the car horizontally (adjust as needed) */
+  width: 50px;
+  height: 100px;
+  z-index: 2; /* Higher z-index to place the car above the divider */
+}
+
+/* Enemy Car Styling */
+.enemyCar {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  z-index: 1; /* Place enemies at the same level as road divider */
+}
+
+.extensionname {
+	color: #bee8ff;
+    font-size: 21px;
+    text-shadow: 0px -2px 9px #a5a3a3;
+}
+
+
+button#playButton {
+    margin-top: 1px;
+    padding: 9px 10px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    border-radius: 46px;
+    border: 2px solid #a495e9;
+    background-color: #8870ef;
+	font-weight: 700;
+    box-shadow: inset 1px 1px 14px 0px rgb(255 251 255);
+}
+button#playButton:hover {
+border: 2px solid #5a40d3;
+    background-color: #4a369f;}
+	
+	
+	
+	
+	
+	
+	button#viewProgress {
+    margin-top: 1px;
+    padding: 9px 10px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    border-radius: 46px;
+    border: 2px solid #a495e9;
+    background-color: #8870ef;
+	font-weight: 700;
+    box-shadow: inset 1px 1px 14px 0px rgb(255 251 255);
+}
+
+button#viewProgress:hover {
+border: 2px solid #5a40d3;
+    background-color: #4a369f;}
